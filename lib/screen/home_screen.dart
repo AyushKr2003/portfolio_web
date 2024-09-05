@@ -5,6 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio_web/constant/const_data.dart';
 import 'package:portfolio_web/provider/current_state.dart';
 import 'package:portfolio_web/screen/phone_screen/phone_home_screen.dart';
+import 'package:portfolio_web/screen/phone_screen/phone_screen_wrapper.dart';
 import 'package:portfolio_web/widget/frosted_container.dart';
 import 'package:provider/provider.dart';
 
@@ -59,7 +60,12 @@ class HomePage extends StatelessWidget {
                     child: Consumer<CurrentState>(builder: (context, _, __) {
                       return DeviceFrame(
                         device: currentState.currentDevice,
-                        screen: currentState.currentScreen,
+                        screen: Container(
+                          decoration: BoxDecoration(
+                            gradient: colors[currentState.colorIndex].gradient
+                          ),
+                          child: ScreenWrapper(childW: currentState.currentScreen),
+                        ),
                       );
                     }),
                   ),

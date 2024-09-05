@@ -7,7 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 class CurrentState extends ChangeNotifier {
   DeviceInfo currentDevice = Devices.ios.iPhone13ProMax;
   int colorIndex = 1;
-
+  bool isMainScreen = true;
+  String? title;
   Widget currentScreen = PhoneHomeScreen();
 
   void changeSelectedDevice(DeviceInfo device) {
@@ -29,5 +30,12 @@ class CurrentState extends ChangeNotifier {
     else {
       print("Something went wrong");
     }
+  }
+
+  Future<void> changeScreen(Widget newScreen, bool isMain, {String? titleL}) async{
+    isMainScreen = isMain;
+    title = titleL;
+    currentScreen = newScreen;
+    notifyListeners();
   }
 }

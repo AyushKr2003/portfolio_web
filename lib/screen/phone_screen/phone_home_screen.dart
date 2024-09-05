@@ -20,9 +20,6 @@ class PhoneHomeScreen extends StatelessWidget {
             left: 20,
             right: 20,
           ),
-          decoration: BoxDecoration(
-            gradient: colors[currentState.colorIndex].gradient,
-          ),
           child: Column(
             children: [
               Wrap(
@@ -43,7 +40,12 @@ class PhoneHomeScreen extends StatelessWidget {
                           CustomButton(
                             onPressed: () {
                               //launch function
-                              currentState.launchInBrowser(apps[index].link!);
+                              if(apps[index].link != null) {
+                                currentState.launchInBrowser(apps[index].link!);
+                              }
+                              else if(apps[index].screen != null){
+                                currentState.changeScreen(apps[index].screen!, false,titleL: apps[index].title);
+                              }
                             },
                             margin: const EdgeInsets.only(bottom: 5),
                             width: 55,

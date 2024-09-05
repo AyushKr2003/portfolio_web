@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_web/models/app_model.dart';
 import 'package:portfolio_web/models/color_model.dart';
 import 'package:portfolio_web/models/device_model.dart';
+import 'package:portfolio_web/screen/phone_screen/about.dart';
 
 List<DeviceModel> devices = [
   DeviceModel(device: Devices.android.samsungGalaxyS20, icon: Icons.android),
@@ -72,10 +73,10 @@ const String linkedIn = 'https://www.linkedin.com/in/ayush-kumar-singh-8b6b00249
 const String resume = 'https://drive.google.com/file/d/1B9vQrY2dNDWVi7lAdSCVI7mkcIY33AVM/view?usp=sharing';
 const String leetcode = 'https://leetcode.com/u/ayushkrsngh2003/';
 const String email = 'ayushkrsngh2003@gmail.com';
-
+const String intro = "Welcome to My Portfolio website,\nI'm pursuing a B.E in CSE.\n\nI am proficient in various programming languages and frameworks.\nI am eager to apply my skills to real-world projects and collaborate with cross- functional teams to develop innovative software solutions.";
 
 List<appModel> apps = [
-  appModel(title: 'About Me', color: Colors.white, icon: Icons.person),
+  appModel(title: 'About Me', color: Colors.white, icon: Icons.person, screen: AboutMeScreen()),
   appModel(title: 'Skills', color: Colors.white, icon: Icons.ac_unit_outlined),
   appModel(title: 'Github', color: Colors.white, icon: Icons.ac_unit_outlined, link: github),
   appModel(title: 'LinkedIn', color: Colors.white, icon: Icons.ac_unit_outlined, link: linkedIn),
