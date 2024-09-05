@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:custom_button_builder/custom_button_builder.dart';
 import 'package:device_frame/device_frame.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/constant/const_data.dart';
 import 'package:portfolio_web/provider/current_state.dart';
@@ -47,6 +48,9 @@ class PhoneHomeScreen extends StatelessWidget {
                               else if(apps[index].screen != null){
                                 currentState.changeScreen(apps[index].screen!, false,titleL: apps[index].title);
                               }
+                              else if(apps[index].title.toLowerCase() == "email"){
+                                _showEmailDialog(context);
+                              }
                             },
                             margin: const EdgeInsets.only(bottom: 5),
                             width: 55,
@@ -84,6 +88,40 @@ class PhoneHomeScreen extends StatelessWidget {
           ),
         );
       }
+    );
+  }
+  void _showEmailDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title:const Center(child: Text('Email ID')),
+          content: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  email,
+                  style: TextStyle(fontSize: 18),
+                ),
+                const SizedBox(height: 20),
+                IconButton(
+                  onPressed: () {
+                    Clipboard.setData(const ClipboardData(text: email)).then(
+                          (_) {
+                        Navigator.pop(context);
+                      },
+                    );
+                  },
+                  icon:const Icon(Icons.copy_rounded, color: Colors.lightBlueAccent,),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }

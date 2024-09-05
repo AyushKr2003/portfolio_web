@@ -20,9 +20,14 @@ class AboutMeScreen extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 50,
+                backgroundImage: AssetImage('assets/profile_photo.png'),
               ),
-              Text("Hi, I am Ayush Kumar Singh.", style: GoogleFonts.openSans(fontSize: 20, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 5),
+              Text("Welcome to my portfolio!", style: GoogleFonts.openSans(fontSize: 20, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 5),
               Text(intro, style: GoogleFonts.openSans(fontSize: 15, fontWeight: FontWeight.w600),),
+              const SizedBox(height: 5),
+              Text(projectBackground, style: GoogleFonts.openSans(fontSize: 15, fontWeight: FontWeight.w600),),
             ],
           ),
         ),

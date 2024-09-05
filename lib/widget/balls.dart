@@ -1,4 +1,3 @@
-// lib/colored_balls.dart
 import 'package:flutter/material.dart';
 
 class ColoredBalls extends StatefulWidget {
@@ -39,7 +38,7 @@ class _ColoredBallsState extends State<ColoredBalls> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final double ballSize = 50.0;
+        const double ballSize = 50.0;
         final double maxHeight = constraints.maxHeight - ballSize;
 
         return AnimatedBuilder(

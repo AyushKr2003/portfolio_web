@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                                     const EdgeInsets.only(top: 0, bottom: 10),
                                 child: FronstedContainer(
                                   childW: Container(
-                                    padding: EdgeInsets.only(left: 20),
+                                    padding: const EdgeInsets.only(left: 20),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                     ),

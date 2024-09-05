@@ -17,8 +17,8 @@ class FronstedContainer extends StatelessWidget {
         child: Stack(
           children: [
             BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 7, sigmaY: 7),
-              child: Container(
+              filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+              child: SizedBox(
                 height: height,
                 width: width,
               ),
@@ -29,8 +29,8 @@ class FronstedContainer extends StatelessWidget {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Colors.white.withOpacity(0.5),
-                    Colors.white.withOpacity(0.3)
+                    Colors.white.withOpacity(0.3),
+                    Colors.white.withOpacity(0.2)
                   ],
                 ),
               ),
