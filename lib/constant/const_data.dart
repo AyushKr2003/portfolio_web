@@ -34,7 +34,7 @@ List<ColorModel> colors = [
   ColorModel(
     svgPath: 'assets/backgroundImg/backBlue.svg',
     gradient: const LinearGradient(
-      colors: [Colors.blueAccent, Colors.black45],
+      colors: [Colors.black26 , Colors.blueAccent],
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,
     ),
