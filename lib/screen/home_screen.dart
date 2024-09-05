@@ -3,6 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:portfolio_web/constant/const_data.dart';
@@ -146,9 +147,6 @@ class HomePage extends StatelessWidget {
                                     ..rotateY(-0.07),
                                   alignment: Alignment.topCenter,
                                   child: FronstedContainer(
-                                    // onPressed: () {
-                                    //   currentState.launchInBrowser(topMate);
-                                    // },
                                     childW: Center(
                                       child: Container(
                                         padding: const EdgeInsets.all(10),
@@ -156,13 +154,8 @@ class HomePage extends StatelessWidget {
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           children: [
-                                            // Image.asset(
-                                            //   "assets/icons/topMate.png",
-                                            //   width: 50 * widthRatio * heightRatio,
-                                            //   height: 50 * widthRatio * heightRatio,
-                                            // ),
                                             const Icon(
-                                              Icons.handshake,
+                                              FontAwesomeIcons.handshake,
                                               color: Colors.white,
                                             ),
                                             SizedBox(
@@ -223,8 +216,8 @@ class HomePage extends StatelessWidget {
                                 ..rotateY(0.05),
                               alignment: Alignment.bottomCenter,
                               child: FronstedContainer(
-                                height: size.height * 0.45,
-                                width: size.width * 0.16,
+                                height: 395 * heightRatio,
+                                width: 247.5 * widthRatio,
                                 childW: Center(
                                   child: Selector<CurrentState, int>(
                                       selector: (context, provider) =>
