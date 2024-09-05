@@ -65,256 +65,259 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  //Left Frosted containers
-                  size.width > 700
-                      ? Column(
-                          children: [
-                            Transform(
-                              transform: Matrix4.identity()
-                                ..setEntry(3, 2, 0.00999)
-                                ..rotateY(-0.06),
-                              alignment: Alignment.bottomCenter,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                margin:
-                                    const EdgeInsets.only(top: 0, bottom: 10),
-                                child: FronstedContainer(
-                                  childW: Container(
-                                    padding: const EdgeInsets.only(left: 20),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: Transform(
-                                      transform: Matrix4.identity()
-                                        ..setEntry(3, 2, 0.00999)
-                                        ..rotateY(-0.04),
-                                      alignment: FractionalOffset.center,
-                                      child: Row(
-                                        children: [
-                                          Flexible(
-                                            child: Center(
-                                              child: Padding(
-                                                padding:
-                                                    const EdgeInsets.all(10),
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  children: [
-                                                    AutoSizeText(
-                                                      'Welcome!\nExplore my portfolio like an app and discover what we can create together.',
-                                                      style: GoogleFonts.exo(
-                                                          // fontSize: 25,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.w500),
-                                                      maxFontSize: 25,
-                                                      minFontSize: 20,
-                                                      maxLines: 5,
-                                                    ).animate().fadeIn(
-                                                        delay: .8.seconds,
-                                                        duration: .7.seconds),
-                                                  ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    //Left Frosted containers
+                    size.width > 700
+                        ? Column(
+                            children: [
+                              Transform(
+                                transform: Matrix4.identity()
+                                  ..setEntry(3, 2, 0.00999)
+                                  ..rotateY(-0.06),
+                                alignment: Alignment.bottomCenter,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  margin:
+                                      const EdgeInsets.only(top: 0, bottom: 10),
+                                  child: FronstedContainer(
+                                    childW: Container(
+                                      padding: const EdgeInsets.only(left: 20),
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Transform(
+                                        transform: Matrix4.identity()
+                                          ..setEntry(3, 2, 0.00999)
+                                          ..rotateY(-0.04),
+                                        alignment: FractionalOffset.center,
+                                        child: Row(
+                                          children: [
+                                            Flexible(
+                                              child: Center(
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.all(10),
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.start,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment.center,
+                                                    children: [
+                                                      AutoSizeText(
+                                                        'Welcome!\nExplore my portfolio like an app and discover what we can create together.',
+                                                        style: GoogleFonts.exo(
+                                                            // fontSize: 25,
+                                                            color: Colors.white,
+                                                            fontWeight:
+                                                                FontWeight.w500),
+                                                        maxFontSize: 25,
+                                                        minFontSize: 20,
+                                                        maxLines: 5,
+                                                      ).animate().fadeIn(
+                                                          delay: .8.seconds,
+                                                          duration: .7.seconds),
+                                                    ],
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
+                                    height: 395 * heightRatio,
+                                    width: 247.5 * widthRatio,
                                   ),
-                                  height: 395 * heightRatio,
-                                  width: 247.5 * widthRatio,
                                 ),
                               ),
-                            ),
-                            const SizedBox(height: 20),
-                            MouseRegion(
-                              cursor: SystemMouseCursors.click,
-                              child: GestureDetector(
-                                onTap: () {
-                                  currentState.launchInBrowser(linkedIn);
-                                },
-                                child: Transform(
-                                  transform: Matrix4.identity()
-                                    ..setEntry(3, 2, 0.009999)
-                                    ..rotateY(-0.07),
-                                  alignment: Alignment.topCenter,
+                              const SizedBox(height: 20),
+                              MouseRegion(
+                                cursor: SystemMouseCursors.click,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    currentState.launchInBrowser(linkedIn);
+                                  },
+                                  child: Transform(
+                                    transform: Matrix4.identity()
+                                      ..setEntry(3, 2, 0.009999)
+                                      ..rotateY(-0.07),
+                                    alignment: Alignment.topCenter,
+                                    child: FronstedContainer(
+                                      childW: Center(
+                                        child: Container(
+                                          padding: const EdgeInsets.all(10),
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              const Icon(
+                                                FontAwesomeIcons.handshake,
+                                                color: Colors.white,
+                                              ),
+                                              SizedBox(
+                                                height: 10 * heightRatio,
+                                              ),
+                                              Flexible(
+                                                  child: AutoSizeText(
+                                                "Let's connect!",
+                                                style: GoogleFonts.exo(
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w700,
+                                                  fontSize:
+                                                      28 * widthRatio * heightRatio,
+                                                ),
+                                                textAlign: TextAlign.center,
+                                                maxFontSize: 28,
+                                                minFontSize: 15,
+                                              )),
+                                            ],
+                                          ).animate().fadeIn(
+                                              delay: 1.seconds, duration: .7.seconds),
+                                        ),
+                                      ),
+                                      height: 175.5 * heightRatio,
+                                      width: 245 * widthRatio,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                        : const SizedBox.shrink(),
+                    const SizedBox(width: 10),
+                    //Main Device Screen
+                    SizedBox(
+                      height: size.height - 100,
+                      child: Consumer<CurrentState>(builder: (context, _, __) {
+                        return DeviceFrame(
+                          device: currentState.currentDevice,
+                          screen: Container(
+                            decoration: BoxDecoration(
+                                gradient:
+                                    colors[currentState.colorIndex].gradient),
+                            child:
+                                ScreenWrapper(childW: currentState.currentScreen),
+                          ),
+                        );
+                      }),
+                    ),
+                    const SizedBox(width: 10),
+                    //Right frosted container
+                    size.width > 700
+                        ? Column(
+                            children: [
+                              Transform(
+                                transform: Matrix4.identity()
+                                  ..setEntry(3, 2, 0.01)
+                                  ..rotateY(0.05),
+                                alignment: Alignment.bottomCenter,
+                                child: FronstedContainer(
+                                  height: 395 * heightRatio,
+                                  width: 247.5 * widthRatio,
+                                  childW: Center(
+                                    child: Selector<CurrentState, int>(
+                                        selector: (context, provider) =>
+                                            provider.colorIndex,
+                                        builder: (context, _, __) {
+                                          return Wrap(
+                                            children: [
+                                              ...List.generate(
+                                                colors.length,
+                                                (index) => CustomButton(
+                                                  margin: const EdgeInsets.all(8),
+                                                  onPressed: () {
+                                                    currentState
+                                                        .changeGradient(index);
+                                                  },
+                                                  pressed:
+                                                      currentState.colorIndex ==
+                                                              index
+                                                          ? Pressed.pressed
+                                                          : Pressed.notPressed,
+                                                  animate: true,
+                                                  isThreeD: true,
+                                                  borderRadius: 100,
+                                                  height: 52,
+                                                  width: 52,
+                                                  shadowColor: Colors.white,
+                                                  backgroundColor:
+                                                      colors[index].color,
+                                                ),
+                                              )
+                                            ],
+                                          );
+                                        }),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 20),
+                              Transform(
+                                transform: Matrix4.identity()
+                                  ..setEntry(3, 2, 0.00999)
+                                  ..rotateY(0.06),
+                                alignment: Alignment.topCenter,
+                                child: Container(
+                                  margin:
+                                  const EdgeInsets.only(top: 0, bottom: 10),
                                   child: FronstedContainer(
                                     childW: Center(
                                       child: Container(
-                                        padding: const EdgeInsets.all(10),
-                                        child: Column(
-                                          mainAxisAlignment:
+                                        margin: const EdgeInsets.all(10),
+                                        padding:
+                                        EdgeInsets.all(10 * widthRatio),
+                                        child: Center(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                              mainAxisAlignment:
                                               MainAxisAlignment.center,
-                                          children: [
-                                            const Icon(
-                                              FontAwesomeIcons.handshake,
-                                              color: Colors.white,
-                                            ),
-                                            SizedBox(
-                                              height: 10 * heightRatio,
-                                            ),
-                                            Flexible(
-                                                child: AutoSizeText(
-                                              "Let's connect!",
-                                              style: GoogleFonts.exo(
-                                                color: Colors.white,
-                                                fontWeight: FontWeight.w700,
-                                                fontSize:
-                                                    28 * widthRatio * heightRatio,
-                                              ),
-                                              textAlign: TextAlign.center,
-                                              maxFontSize: 28,
-                                              minFontSize: 15,
+                                              children: [
+                                                AutoSizeText(
+                                                  '"When you realize your programming skills are just a series of ChatGPT prompts and copy-pastes"',
+                                                  style: GoogleFonts.inter(
+                                                    // fontSize: 30,
+                                                      color: Colors.white,
+                                                      fontWeight: FontWeight.w400),
+                                                  maxFontSize: 25,
+                                                  minFontSize: 10,
+                                                  maxLines: 4,
+                                                ),
+                                                Align(
+                                                    alignment: Alignment.bottomRight,
+                                                    child: AutoSizeText(
+                                                      '-Anonymous',
+                                                      style: GoogleFonts.inter(
+                                                        // fontSize: 12,
+                                                          color: Colors.white
+                                                              .withOpacity(0.6),
+                                                          fontWeight:
+                                                          FontWeight.w400),
+                                                      maxFontSize: 12,
+                                                      minFontSize: 6,
+                                                      maxLines: 1,
+                                                    )),
+                                              ],
                                             )),
-                                          ],
-                                        ).animate().fadeIn(
-                                            delay: 1.seconds, duration: .7.seconds),
                                       ),
-                                    ),
+                                    ).animate().fadeIn(
+                                        delay: 1.seconds, duration: .7.seconds),
                                     height: 175.5 * heightRatio,
                                     width: 245 * widthRatio,
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        )
-                      : const SizedBox.shrink(),
-                  const SizedBox(width: 10),
-                  //Main Device Screen
-                  SizedBox(
-                    height: size.height - 100,
-                    child: Consumer<CurrentState>(builder: (context, _, __) {
-                      return DeviceFrame(
-                        device: currentState.currentDevice,
-                        screen: Container(
-                          decoration: BoxDecoration(
-                              gradient:
-                                  colors[currentState.colorIndex].gradient),
-                          child:
-                              ScreenWrapper(childW: currentState.currentScreen),
-                        ),
-                      );
-                    }),
-                  ),
-                  const SizedBox(width: 10),
-                  //Right frosted container
-                  size.width > 700
-                      ? Column(
-                          children: [
-                            Transform(
-                              transform: Matrix4.identity()
-                                ..setEntry(3, 2, 0.01)
-                                ..rotateY(0.05),
-                              alignment: Alignment.bottomCenter,
-                              child: FronstedContainer(
-                                height: 395 * heightRatio,
-                                width: 247.5 * widthRatio,
-                                childW: Center(
-                                  child: Selector<CurrentState, int>(
-                                      selector: (context, provider) =>
-                                          provider.colorIndex,
-                                      builder: (context, _, __) {
-                                        return Wrap(
-                                          children: [
-                                            ...List.generate(
-                                              colors.length,
-                                              (index) => CustomButton(
-                                                margin: const EdgeInsets.all(8),
-                                                onPressed: () {
-                                                  currentState
-                                                      .changeGradient(index);
-                                                },
-                                                pressed:
-                                                    currentState.colorIndex ==
-                                                            index
-                                                        ? Pressed.pressed
-                                                        : Pressed.notPressed,
-                                                animate: true,
-                                                isThreeD: true,
-                                                borderRadius: 100,
-                                                height: 52,
-                                                width: 52,
-                                                shadowColor: Colors.white,
-                                                backgroundColor:
-                                                    colors[index].color,
-                                              ),
-                                            )
-                                          ],
-                                        );
-                                      }),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: 20),
-                            Transform(
-                              transform: Matrix4.identity()
-                                ..setEntry(3, 2, 0.00999)
-                                ..rotateY(0.06),
-                              alignment: Alignment.topCenter,
-                              child: Container(
-                                margin:
-                                const EdgeInsets.only(top: 0, bottom: 10),
-                                child: FronstedContainer(
-                                  childW: Center(
-                                    child: Container(
-                                      margin: const EdgeInsets.all(10),
-                                      padding:
-                                      EdgeInsets.all(10 * widthRatio),
-                                      child: Center(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                            mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                            children: [
-                                              AutoSizeText(
-                                                '"When you realize your programming skills are just a series of ChatGPT prompts and copy-pastes"',
-                                                style: GoogleFonts.inter(
-                                                  // fontSize: 30,
-                                                    color: Colors.white,
-                                                    fontWeight: FontWeight.w400),
-                                                maxFontSize: 25,
-                                                minFontSize: 10,
-                                                maxLines: 4,
-                                              ),
-                                              Align(
-                                                  alignment: Alignment.bottomRight,
-                                                  child: AutoSizeText(
-                                                    '-Anonymous',
-                                                    style: GoogleFonts.inter(
-                                                      // fontSize: 12,
-                                                        color: Colors.white
-                                                            .withOpacity(0.6),
-                                                        fontWeight:
-                                                        FontWeight.w400),
-                                                    maxFontSize: 12,
-                                                    minFontSize: 6,
-                                                    maxLines: 1,
-                                                  )),
-                                            ],
-                                          )),
-                                    ),
-                                  ).animate().fadeIn(
-                                      delay: 1.seconds, duration: .7.seconds),
-                                  height: 175.5 * heightRatio,
-                                  width: 245 * widthRatio,
-                                ),
-                              ),
-                            ),
 
-                          ],
-                        )
-                      : const SizedBox.shrink(),
-                ],
+                            ],
+                          )
+                        : const SizedBox.shrink(),
+                  ],
+                ),
               ),
               const SizedBox(height: 10),
               Row(
