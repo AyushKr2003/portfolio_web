@@ -18,6 +18,7 @@ class Portfolio extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
+        title: 'Portfolio App',
         home: HomePage(),
         ),
     );
