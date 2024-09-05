@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:custom_button_builder/custom_button_builder.dart';
 import 'package:device_frame/device_frame.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_web/constant/const_data.dart';
 import 'package:portfolio_web/provider/current_state.dart';
 import 'package:provider/provider.dart';
@@ -66,9 +67,9 @@ class PhoneHomeScreen extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 apps[index].title,
-                                style: const TextStyle(
+                                style: GoogleFonts.openSans(
                                     fontSize: 11,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w500,
                                     color: Colors.white),
                               ),
                             ),

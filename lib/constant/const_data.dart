@@ -75,15 +75,26 @@ const String leetcode = 'https://leetcode.com/u/ayushkrsngh2003/';
 const String email = 'ayushkrsngh2003@gmail.com';
 const String intro = "Welcome to My Portfolio website,\nI'm pursuing a B.E in CSE.\n\nI am proficient in various programming languages and frameworks.\nI am eager to apply my skills to real-world projects and collaborate with cross- functional teams to develop innovative software solutions.";
 
-List<appModel> apps = [
-  appModel(title: 'About Me', color: Colors.white, icon: Icons.person, screen: AboutMeScreen()),
-  appModel(title: 'Skills', color: Colors.white, icon: Icons.ac_unit_outlined),
-  appModel(title: 'Github', color: Colors.white, icon: Icons.ac_unit_outlined, link: github),
-  appModel(title: 'LinkedIn', color: Colors.white, icon: Icons.ac_unit_outlined, link: linkedIn),
-  appModel(title: 'Resume', color: Colors.white, icon: Icons.ac_unit_outlined, link: resume),
-  appModel(title: 'LeetCode', color: Colors.white, icon: Icons.ac_unit_outlined, link: leetcode),
-  appModel(title: 'Email', color: Colors.white, icon: Icons.ac_unit_outlined),
-  appModel(title: 'Experiance', color: Colors.white, icon: Icons.ac_unit_outlined),
-  appModel(title: 'Carmania', color: Colors.white, icon: Icons.ac_unit_outlined),
-  appModel(title: 'TO-Do', color: Colors.white, icon: Icons.ac_unit_outlined),
+List<AppModel> apps = [
+  AppModel(title: 'About Me', color: Colors.white, icon: Icons.person, screen: AboutMeScreen()),
+  AppModel(title: 'Skills', color: Colors.white, icon: Icons.ac_unit_outlined),
+  AppModel(title: 'Github', color: Colors.white, icon: Icons.ac_unit_outlined, link: github),
+  AppModel(title: 'LinkedIn', color: Colors.white, icon: Icons.ac_unit_outlined, link: linkedIn),
+  AppModel(title: 'Resume', color: Colors.white, icon: Icons.ac_unit_outlined, link: resume),
+  AppModel(title: 'LeetCode', color: Colors.white, icon: Icons.ac_unit_outlined, link: leetcode),
+  AppModel(title: 'Email', color: Colors.white, icon: Icons.ac_unit_outlined),
+  AppModel(title: 'Experiance', color: Colors.white, icon: Icons.ac_unit_outlined),
+  AppModel(title: 'Carmania', color: Colors.white, icon: Icons.ac_unit_outlined),
+  AppModel(title: 'TO-DO', color: Colors.white, icon: Icons.ac_unit_outlined),
+];
+
+
+final List<Color> ballsColors = [
+  Colors.lightGreenAccent,
+  Colors.lightBlue,
+  Colors.deepPurple,
+  Colors.purple,
+  Colors.green,
+  Colors.indigo,
+  Colors.red
 ];

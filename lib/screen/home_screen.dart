@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio_web/constant/const_data.dart';
 import 'package:portfolio_web/provider/current_state.dart';
-import 'package:portfolio_web/screen/phone_screen/phone_home_screen.dart';
 import 'package:portfolio_web/screen/phone_screen/phone_screen_wrapper.dart';
+import 'package:portfolio_web/widget/balls.dart';
 import 'package:portfolio_web/widget/frosted_container.dart';
 import 'package:provider/provider.dart';
 
@@ -27,6 +27,13 @@ class HomePage extends StatelessWidget {
               ),
             );
           }),
+          size.width > 300 ? _coloredBallPosition(200, 2, ballsColors[0]): const SizedBox.shrink(),
+          size.width > 500 ? _coloredBallPosition(400, 4, ballsColors[1]) : const SizedBox.shrink(),
+          size.width > 700 ? _coloredBallPosition(600, 3, ballsColors[2]) : const SizedBox.shrink(),
+          size.width > 900 ? _coloredBallPosition(800, 2, ballsColors[3]) : const SizedBox.shrink(),
+          size.width > 1100 ? _coloredBallPosition(1000, 4, ballsColors[4]) : const SizedBox.shrink(),
+          size.width > 1300 ? _coloredBallPosition(1200, 3, ballsColors[5]) : const SizedBox.shrink(),
+          size.width > 1500 ? _coloredBallPosition(1400, 2, ballsColors[6]) : const SizedBox.shrink(),
           Consumer<CurrentState>(builder: (context, _, __) {
             return SvgPicture.asset(
               colors[currentState.colorIndex].svgPath,
@@ -38,9 +45,11 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 10),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  //Left Frosted containers
                   Column(
                     children: [
                       FronstedContainer(
@@ -70,6 +79,7 @@ class HomePage extends StatelessWidget {
                     }),
                   ),
                   const SizedBox(width: 10),
+                  //Right frosted container
                   Column(
                     children: [
                       FronstedContainer(
@@ -157,6 +167,14 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+  Widget _coloredBallPosition(double position, int duration, Color color){
+    return Row(
+      children: [
+        SizedBox(width: position),
+        ColoredBalls(color: color, duration: duration),
+      ],
     );
   }
 }

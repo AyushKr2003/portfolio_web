@@ -16,20 +16,20 @@ class ScreenWrapper extends StatelessWidget {
         Consumer<CurrentState>(builder: (context, _, __) {
           if(instance.isMainScreen==false) {
             return Container(
-              decoration: BoxDecoration(
+              decoration:const BoxDecoration(
                 color: Colors.white
               ),
               width: double.infinity,
-              padding: EdgeInsets.only(top: 30, left: 20,right: 20),
+              padding:const EdgeInsets.only(top: 30, left: 20,right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(instance.title ?? '', style: GoogleFonts.openSans(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w500),),
                   IconButton(
                     onPressed: () {
-                      instance.changeScreen(PhoneHomeScreen(),true);
+                      instance.changeScreen(const PhoneHomeScreen(),true);
                     },
-                    icon: Icon(Icons.close),
+                    icon:const Icon(Icons.close),
                   )
                 ],
               ),

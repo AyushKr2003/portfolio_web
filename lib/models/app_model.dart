@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class appModel {
+class AppModel {
   String title;
   String? assetPath;
   IconData? icon;
@@ -8,7 +8,7 @@ class appModel {
   Widget? screen;
   String? link;
 
-  appModel({
+  AppModel({
     required this.title,
     this.assetPath,
     this.icon,

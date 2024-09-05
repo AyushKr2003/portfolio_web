@@ -11,14 +11,14 @@ class AboutMeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 18, vertical: 18),
-          decoration: BoxDecoration(
+          margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
+          decoration: const BoxDecoration(
             color: Color(0xfff5f4e7)
           ),
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50,
               ),
               Text("Hi, I am Ayush Kumar Singh.", style: GoogleFonts.openSans(fontSize: 20, fontWeight: FontWeight.bold)),
