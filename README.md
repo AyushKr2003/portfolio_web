@@ -15,7 +15,7 @@ This portfolio website is created for personal use to showcase my projects, skil
 
 ## Live Link
 
-You can view the live version of this portfolio website at: [portfolio.com](http://portfolio.com)
+You can view the live version of this portfolio website at: [portfolio link](https://66da088a4a655e1f6f771cf9--reliable-mandazi-aa2c66.netlify.app/)
 
 ## Getting Started
 
