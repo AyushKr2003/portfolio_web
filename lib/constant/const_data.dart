@@ -7,6 +7,11 @@ import 'package:portfolio_web/models/skills_model.dart';
 import 'package:portfolio_web/screen/phone_screen/about.dart';
 import 'package:portfolio_web/screen/phone_screen/skills.dart';
 
+
+const double baseHeight = 790;
+const double baseWidth = 1440;
+
+
 List<DeviceModel> devices = [
   DeviceModel(device: Devices.android.samsungGalaxyS20, icon: Icons.android),
   DeviceModel(device: Devices.ios.iPhone13, icon: Icons.apple),
