@@ -50,6 +50,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   //Left Frosted containers
+                  size.width > 700 ?
                   Column(
                     children: [
                       FronstedContainer(
@@ -62,7 +63,8 @@ class HomePage extends StatelessWidget {
                         width: size.width * 0.16,
                       ),
                     ],
-                  ),
+                  )
+                      : const SizedBox.shrink(),
                   const SizedBox(width: 10),
                   SizedBox(
                     height: size.height - 100,
@@ -80,6 +82,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(width: 10),
                   //Right frosted container
+                  size.width > 700 ?
                   Column(
                     children: [
                       FronstedContainer(
@@ -123,7 +126,8 @@ class HomePage extends StatelessWidget {
                         width: size.width * 0.16,
                       ),
                     ],
-                  ),
+                  )
+                      : const SizedBox.shrink(),
                 ],
               ),
               const SizedBox(height: 10),
