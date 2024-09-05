@@ -111,10 +111,22 @@ List<AppModel> apps = [
       icon: FontAwesomeIcons.github,
       link: github),
   AppModel(
+      title: 'Projects',
+      color: Colors.white,
+      icon: FontAwesomeIcons.terminal,
+      screen: const ProjectsScreen()),
+  AppModel(
+      title: 'Experiance',
+      color: Colors.white,
+      icon: FontAwesomeIcons.contactCard,
+      screen: const Experience()),
+  AppModel(
       title: 'LinkedIn',
       color: Colors.white,
       icon: FontAwesomeIcons.linkedin,
       link: linkedIn),
+  AppModel(
+      title: 'Email', color: Colors.white, icon: FontAwesomeIcons.envelope),
   AppModel(
       title: 'Resume',
       color: Colors.white,
@@ -125,18 +137,6 @@ List<AppModel> apps = [
       color: Colors.white,
       icon: FontAwesomeIcons.code,
       link: leetcode),
-  AppModel(
-      title: 'Email', color: Colors.white, icon: FontAwesomeIcons.envelope),
-  AppModel(
-      title: 'Experiance',
-      color: Colors.white,
-      icon: FontAwesomeIcons.user,
-      screen: const Experience()),
-  AppModel(
-      title: 'Projects',
-      color: Colors.white,
-      icon: FontAwesomeIcons.terminal,
-      screen: const ProjectsScreen()),
 ];
 
 final List<Color> ballsColors = [
