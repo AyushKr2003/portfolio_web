@@ -86,7 +86,7 @@ const String resume =
 const String leetcode = 'https://leetcode.com/u/ayushkrsngh2003/';
 const String email = 'ayushkrsngh2003@gmail.com';
 const String intro =
-    "I’m Ayush Kumar Singh, a third-year student at Chandigarh University with a passion for developing cross-platform applications. \n\nProficient in various programming languages and frameworks, I am eager to apply my skills to real-world projects and collaborate with innovative teams";
+    "I’m Ayush Kumar Singh, a third-year student at Chandigarh University with a passion for developing cross-platform applications. \n\nProficient in various programming languages and frameworks, I am eager to apply my skills to real-world projects and collaborate with innovative teams.";
 const String projectBackground = "As a dedicated mobile and web developer, I specialize in creating dynamic applications using Flutter. My notable projects include CognitoAI, a voice assistant app for Android and iOS, and Carmania, a car booking app with a polished user interface.\n\nAdditionally, I have developed a Personal Details dApp on Ethereum, showcasing my expertise in smart contracts, Hardhat deployment, and React frontend integration. I am committed to delivering high-quality, user-centric solutions across different platforms.";
 
 List<AppModel> apps = [
@@ -116,7 +116,7 @@ List<AppModel> apps = [
       icon: FontAwesomeIcons.terminal,
       screen: const ProjectsScreen()),
   AppModel(
-      title: 'Experiance',
+      title: 'Experience',
       color: Colors.white,
       icon: FontAwesomeIcons.contactCard,
       screen: const Experience()),
