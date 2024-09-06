@@ -15,7 +15,7 @@ This portfolio website is created for personal use to showcase my projects, skil
 
 ## Live Link
 
-You can view the live version of this portfolio website at: [portfolio link](https://66da0d37d9eea4846089f6fc--rococo-faloodeh-c80030.netlify.app/)
+You can view the live version of this portfolio website at: [portfolio link](https://main--ayushkrsnghportfolio.netlify.app/)
 
 ## Getting Started
 
