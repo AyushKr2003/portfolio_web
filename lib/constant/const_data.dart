@@ -34,7 +34,7 @@ List<ColorModel> colors = [
   ColorModel(
     svgPath: 'assets/backgroundImg/backBlue.svg',
     gradient: const LinearGradient(
-      colors: [Colors.black26 , Colors.blueAccent],
+      colors: [Colors.black26, Colors.blueAccent],
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,
     ),
@@ -82,12 +82,23 @@ const String github = 'https://github.com/AyushKr2003';
 const String linkedIn =
     'https://www.linkedin.com/in/ayush-kumar-singh-8b6b00249/';
 const String resume =
-    'https://drive.google.com/file/d/1B9vQrY2dNDWVi7lAdSCVI7mkcIY33AVM/view?usp=sharing';
+    'https://drive.google.com/file/d/1Ggca9p8U9jMipmA09wwHtG1p5Yk2ASi_/view?usp=sharing';
 const String leetcode = 'https://leetcode.com/u/ayushkrsngh2003/';
 const String email = 'ayushkrsngh2003@gmail.com';
+// const String intro =
+//     "I’m Ayush Kumar Singh, a forth-year student at Chandigarh University with a passion for developing cross-platform applications. \n\nProficient in various programming languages and frameworks, I am eager to apply my skills to real-world projects and collaborate with innovative teams.";
 const String intro =
-    "I’m Ayush Kumar Singh, a third-year student at Chandigarh University with a passion for developing cross-platform applications. \n\nProficient in various programming languages and frameworks, I am eager to apply my skills to real-world projects and collaborate with innovative teams.";
-const String projectBackground = "As a dedicated mobile and web developer, I specialize in creating dynamic applications using Flutter. My notable projects include CognitoAI, a voice assistant app for Android and iOS, and Carmania, a car booking app with a polished user interface.\n\nAdditionally, I have developed a Personal Details dApp on Ethereum, showcasing my expertise in smart contracts, Hardhat deployment, and React frontend integration. I am committed to delivering high-quality, user-centric solutions across different platforms.";
+    "I’m Ayush Kumar Singh, a final-year Computer Science Engineering student at Chandigarh University.\n\n"
+    "With a strong passion for cross-platform development, I specialize in building modern mobile and web applications using Flutter, FastAPI, and other technologies. "
+    "I enjoy turning ideas into impactful digital products and collaborating with forward-thinking teams.";
+
+// const String projectBackground =
+//     "As a dedicated mobile and web developer, I specialize in creating dynamic applications using Flutter. My notable projects include CognitoAI, a voice assistant app for Android and iOS, and Carmania, a car booking app with a polished user interface.\n\nAdditionally, I have developed a Personal Details dApp on Ethereum, showcasing my expertise in smart contracts, Hardhat deployment, and React frontend integration. I am committed to delivering high-quality, user-centric solutions across different platforms.";
+const String projectBackground =
+    "Here are some of the key projects that showcase my development skills and problem-solving approach:\n\n"
+    "• Musixir – A modern music streaming application with secure JWT authentication, Cloudinary integration, and a responsive Flutter UI.\n\n"
+    "• Nex Vote – A decentralized voting platform built with Flutter and Ethereum blockchain, featuring real-time vote tracking and secure election management.\n\n"
+    "• SageSearch – An AI-powered web search engine using Flutter and FastAPI with real-time WebSocket communication and intelligent content synthesis.";
 
 List<AppModel> apps = [
   AppModel(
@@ -207,7 +218,7 @@ final List<JobExperience> education = [
     startDate: 'Aug 2022',
     endDate: 'Present',
     bulletPoints: [
-      "Currently in the third year of my college!",
+      "Currently in the forth year of my college!",
       "Current CGPA: 7.8",
     ],
   ),
@@ -242,7 +253,7 @@ final List<JobExperience> jobExperiences = [
     title: 'Flutter Developer Intern',
     company: 'Medoc Health',
     startDate: 'July 2024',
-    endDate: 'Present',
+    endDate: 'Dec 2024',
     bulletPoints: [
       "Contributed to the design and implementation of the user interface for a web application used in a hospital setting",
       " Integrated various APIs to enhance the functionality and connectivity of the web application",
@@ -254,17 +265,46 @@ final List<JobExperience> jobExperiences = [
 
 final List<JobExperience> projects = [
   JobExperience(
-    color: Colors.red,
+    color: Colors.blueAccent,
     location: "",
-    title: 'Carmania',
+    title: 'Musixir',
     company: '',
-    startDate: 'Aug 2022',
+    startDate: '2024',
     endDate: '',
     bulletPoints: [
-      "Developed a cross-platform mobile app for Carmania using Flutter, targeting both iOS and Android devices.",
-      "Designed and implemented the user interface for car rentals, providing a seamless and intuitive experience for users.",
-      "Categorized vehicles into sections such as Class S, SUV, and Supercar to facilitate easy browsing and selection.",
-      "Focused on delivering a visually appealing and responsive UI, ensuring a consistent experience across multiple platforms.",
+      "Developed a modern music streaming app using Flutter and FastAPI backend.",
+      "Implemented secure JWT-based authentication for user login and data access.",
+      "Integrated Cloudinary to manage music files and artwork storage for users.",
+      "Designed a responsive mobile UI with features like dark mode and background playback.",
+    ],
+  ),
+  JobExperience(
+    color: Colors.green,
+    location: "",
+    title: 'SageSearch',
+    company: '',
+    startDate: '2025',
+    endDate: '',
+    bulletPoints: [
+      "Developed a sophisticated web search platform synthesizing information from multiple sources.",
+      "Implemented AI-powered responses using Google Gemini and search ranking via Tavily API.",
+      "Built a responsive Flutter frontend compatible across desktop, tablet, and mobile.",
+      "Optimized real-time communication with WebSocket support for streaming responses.",
+      "Created a RESTful FastAPI backend with clean, well-documented endpoints.",
+    ],
+  ),
+  JobExperience(
+    color: Colors.deepPurple,
+    location: "",
+    title: 'Nex Vote',
+    company: '',
+    startDate: '2024',
+    endDate: '',
+    bulletPoints: [
+      "Built the frontend with Flutter, integrating it with backend services and Ethereum blockchain.",
+      "Implemented user authentication, election management, and real-time vote counting.",
+      "Ensured secure and transparent voting processes with blockchain, enabling verifiable votes.",
+      "Created a user-friendly interface for voters to participate in elections with ease.",
     ],
   ),
   JobExperience(
@@ -279,20 +319,6 @@ final List<JobExperience> projects = [
       "Integrated APIs for ChatGPT and DALL-E, using ChatGPT for text-based interactions and DALL-E for image generation based on user prompts.",
       "Implemented a scrollable chat history view, allowing users to review their conversation while the app is open.",
       "Ensured data persistence only during the app session, with chat history cleared upon app closure.",
-    ],
-  ),
-  JobExperience(
-    color: Colors.orange,
-    location: 'location',
-    title: 'Personal Form on Ethereum',
-    company: 'company',
-    startDate: 'May 2024',
-    endDate: 'endDate',
-    bulletPoints: [
-      "Developed a decentralized application (dApp) for Ethereum using Solidity for smart contracts.",
-      "Hardhat for deployment, and React for the frontend, allowing users to store and retrieve personal details on the blockchain.",
-      "Implemented smart contract functionalities to set, get, and clear personal information, with additional features for retrieving details by address (accessible only by the contract owner).",
-      "Configured and deployed the smart contract locally with Hardhat, and built a React frontend integrated with Ethers.js and MetaMask for seamless user interaction.",
     ],
   ),
   JobExperience(
